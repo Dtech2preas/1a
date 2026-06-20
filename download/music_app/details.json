@@ -1,0 +1,8 @@
+{
+    "name": "DTECH Music",
+    "package": "co.za.dtech.music",
+    "version": "2.1.0",
+    "developer": "DTECH",
+    "shortDescription": "Stream and download the latest tracks.",
+    "description": "Listen to ad-free music, download tracks for offline listening, and create custom playlists."
+}
