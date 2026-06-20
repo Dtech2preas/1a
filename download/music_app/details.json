@@ -1,8 +1,42 @@
 {
-    "name": "DTECH Music",
+    "name": "D-TECH DISCOVER",
     "package": "co.za.dtech.music",
     "version": "2.1.0",
     "developer": "DTECH",
-    "shortDescription": "Stream and download the latest tracks.",
-    "description": "Listen to ad-free music, download tracks for offline listening, and create custom playlists."
+    "shortDescription": "Discover, stream, and download music with smart recommendations and offline playback.",
+    "description": "D-TECH DISCOVER is an advanced music streaming and downloading platform designed for music lovers who want a seamless listening experience.\n\nSearch millions of tracks, albums, and playlists, discover new music through the unique Music Discovery Roulette, and enjoy uninterrupted playback with intelligent buffering and smart prefetching technology.\n\nCreate playlists, save favorites, download music for offline listening, and enjoy a sleek modern interface built with the signature D-TECH black and neon-blue design.\n\nWhether you're discovering new artists or building your personal music collection, D-TECH DISCOVER provides the tools you need to enjoy music your way.",
+    "category": "🎵 Music & Audio",
+    "tags": [
+        "Music",
+        "Music Downloader",
+        "Music Streaming",
+        "MP3 Downloader",
+        "Offline Music",
+        "Audio Player",
+        "Playlist Manager",
+        "Music Discovery"
+    ],
+    "keyFeatures": [
+        "🔍 Smart Music Search: Search songs, albums, artists, and playlists. Fast music discovery powered by advanced search technology. Find trending and recommended tracks.",
+        "🎲 Music Discovery Roulette: Swipe through new music recommendations. Discover artists and songs you've never heard before. Personalized discovery experience.",
+        "▶️ Music Streaming: High-quality audio playback. Background playback support. Gapless listening experience. Smooth and responsive player controls.",
+        "⬇️ Offline Downloads: Download songs for offline listening. Access your music without an internet connection. Manage downloaded content easily.",
+        "❤️ Personal Music Library: Save favorite songs. Track listening history. Organize custom playlists. Separate streamed and downloaded music.",
+        "🔀 Smart Shuffle: Intelligent song recommendations. Dynamic queue generation. Related music discovery.",
+        "⚡ High-End Mode: Aggressive stream preloading. Reduced buffering. Faster playback startup times.",
+        "🗜️ Storage Optimization: Compress local audio files. Save device storage space. Manage downloaded content efficiently.",
+        "🎨 Modern D-TECH Design: Clean dark theme. Neon blue accents. Smooth animations. User-friendly interface."
+    ],
+    "whatsNew": [
+        "Improved music discovery experience",
+        "Faster streaming performance",
+        "Enhanced offline downloads",
+        "Better playlist management",
+        "UI improvements and bug fixes"
+    ],
+    "permissions": [
+        "Storage access for downloaded music",
+        "Internet access for streaming and search",
+        "Media permissions for playback and library management"
+    ]
 }

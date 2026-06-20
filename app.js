@@ -78,6 +78,14 @@ async function showAppDetails(app) {
     document.getElementById('detail-version').textContent = `v${app.version}`;
     document.getElementById('detail-description').textContent = app.description;
 
+    const categoryEl = document.getElementById('detail-category');
+    if (app.category) {
+        categoryEl.textContent = app.category;
+        categoryEl.style.display = 'block';
+    } else {
+        categoryEl.style.display = 'none';
+    }
+
     const downloadBtn = document.getElementById('detail-download-btn');
     downloadBtn.href = app.apkPath;
     downloadBtn.setAttribute('download', `${app.folder}.apk`);
@@ -110,6 +118,54 @@ async function showAppDetails(app) {
 
     if (gallery.innerHTML === '') {
         gallery.innerHTML = '<p class="text-muted">No screenshots available.</p>';
+    }
+
+    // Load Dynamic Sections
+    const dynamicSections = document.getElementById('detail-dynamic-sections');
+    dynamicSections.innerHTML = ''; // Clear previous sections
+
+    if (app.whatsNew && app.whatsNew.length > 0) {
+        dynamicSections.innerHTML += `
+            <div class="dynamic-section my-4">
+                <h3>What's New</h3>
+                <ul>
+                    ${app.whatsNew.map(item => `<li>${item}</li>`).join('')}
+                </ul>
+            </div>
+        `;
+    }
+
+    if (app.keyFeatures && app.keyFeatures.length > 0) {
+        dynamicSections.innerHTML += `
+            <div class="dynamic-section my-4">
+                <h3>Key Features</h3>
+                <ul class="feature-list">
+                    ${app.keyFeatures.map(item => `<li>${item}</li>`).join('')}
+                </ul>
+            </div>
+        `;
+    }
+
+    if (app.permissions && app.permissions.length > 0) {
+        dynamicSections.innerHTML += `
+            <div class="dynamic-section my-4">
+                <h3>Permissions</h3>
+                <ul>
+                    ${app.permissions.map(item => `<li>${item}</li>`).join('')}
+                </ul>
+            </div>
+        `;
+    }
+
+    if (app.tags && app.tags.length > 0) {
+        dynamicSections.innerHTML += `
+            <div class="dynamic-section tags-section my-4">
+                <h3>Tags</h3>
+                <div class="tags-container">
+                    ${app.tags.map(tag => `<span class="badge tag-badge">${tag}</span>`).join('')}
+                </div>
+            </div>
+        `;
     }
 
     // Switch View
