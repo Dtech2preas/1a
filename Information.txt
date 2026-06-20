@@ -1,1 +1,3 @@
+I want us to create a dtech apps website (dtech play store thing) where we have our apps up for downloading which pics display the apps insides n details explainattion of the apps 
 
+I've already put the apps in the download folder n in the download folder each apps have a dedicated app folder which will have it's to be displayed pics named pic1.png to what ever is the last pic you can check n just edit the frontend to load that many pic*.png
