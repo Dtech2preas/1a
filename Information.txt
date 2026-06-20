@@ -1,3 +1,79 @@
-I want us to create a dtech apps website (dtech play store thing) where we have our apps up for downloading which pics display the apps insides n details explainattion of the apps 
+Create a new DTECH Apps Store website for apps.dtech-services.co.za.
 
-I've already put the apps in the download folder n in the download folder each apps have a dedicated app folder which will have it's to be displayed pics named pic1.png to what ever is the last pic you can check n just edit the frontend to load that many pic*.png
+Purpose:
+
+- Display all DTECH applications available for download.
+- Each app should have its own details page.
+- Users must be able to view screenshots, read descriptions, and download the app.
+
+Folder Structure:
+
+downloads/
+├── app1/
+│   ├── app.apk
+│   ├── icon.png
+│   ├── details.json
+│   ├── pic1.png
+│   ├── pic2.png
+│   └── pic3.png
+├── app2/
+│   ├── app.apk
+│   ├── icon.png
+│   ├── details.json
+│   ├── pic1.png
+│   └── pic2.png
+
+Requirements:
+
+1. Homepage
+   
+   - Display all apps automatically.
+   - Show app icon, name, version, short description and download button.
+   - Read app information from details.json.
+
+2. App Details Page
+   
+   - Show app icon, name, version, developer, description and download button.
+   - Display screenshots in a carousel/gallery.
+
+3. Screenshot Loading
+   
+   - Do NOT hardcode screenshot names.
+   - Automatically detect all files matching:
+     pic1.png
+     pic2.png
+     pic3.png
+     ...
+   - Continue until no further pic*.png files exist.
+   - Display all detected screenshots in order.
+
+4. Automatic Discovery
+   
+   - Any new folder added inside /downloads should automatically appear on the website without frontend code changes.
+
+5. Design
+   
+   - Modern Play Store inspired design.
+   - Mobile-first responsive layout.
+   - Dark and light mode support.
+   - Fast loading and clean UI.
+
+6. SEO
+   
+   - Generate proper page titles and metadata from details.json.
+
+7. Cloudflare Compatibility
+   
+   - Must work on Cloudflare Pages.
+   - Avoid server-side dependencies that Cloudflare Pages cannot run.
+
+Example details.json:
+
+{
+"name": "DTECH Quiz",
+"package": "co.za.dtech.quiz",
+"version": "1.0.0",
+"developer": "DTECH",
+"shortDescription": "Practice quizzes and exam preparation.",
+"description": "Full app description here."
+}
