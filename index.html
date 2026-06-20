@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DTECH Apps Store</title>
+    <meta name="description" content="Download the latest DTECH applications.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="app-header">
+        <div class="container header-content">
+            <h1 id="home-link" style="cursor: pointer;">DTECH Apps</h1>
+            <nav>
+                <!-- Space for future navigation links -->
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Homepage View -->
+        <section id="homepage" class="view active">
+            <div class="app-grid" id="app-grid">
+                <!-- App cards will be injected here -->
+            </div>
+        </section>
+
+        <!-- App Details View -->
+        <section id="app-details" class="view">
+            <button id="back-button" class="btn btn-secondary mb-4">&larr; Back to Apps</button>
+            <div class="app-details-container">
+                <div class="app-header-info">
+                    <img id="detail-icon" src="" alt="App Icon" class="detail-icon">
+                    <div class="app-meta">
+                        <h2 id="detail-name">App Name</h2>
+                        <p id="detail-developer" class="text-muted">Developer</p>
+                        <p id="detail-version" class="badge">Version</p>
+                    </div>
+                </div>
+
+                <div class="action-buttons my-4">
+                    <a id="detail-download-btn" href="#" class="btn btn-primary btn-large">Download APK</a>
+                </div>
+
+                <div class="screenshots-section">
+                    <h3>Screenshots</h3>
+                    <div id="screenshots-gallery" class="gallery">
+                        <!-- Screenshots injected here -->
+                    </div>
+                </div>
+
+                <div class="description-section my-4">
+                    <h3>About this app</h3>
+                    <p id="detail-description">App description goes here...</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <div class="container text-center">
+            <p>&copy; 2023 DTECH Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

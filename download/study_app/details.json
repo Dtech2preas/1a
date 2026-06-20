@@ -1,0 +1,8 @@
+{
+    "name": "DTECH Study",
+    "package": "co.za.dtech.study",
+    "version": "1.5.2",
+    "developer": "DTECH",
+    "shortDescription": "Your personal study companion.",
+    "description": "Organize your study schedule, set reminders, and take interactive quizzes to boost your knowledge."
+}
