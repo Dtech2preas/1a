@@ -27,10 +27,16 @@ async function loadAppsData() {
             const response = await fetch(`download/${folder}/details.json`);
             if (!response.ok) throw new Error('Network response was not ok');
             const data = await response.json();
+
+            let iconPath = await findExistingImage(`download/${folder}`, 'icon');
+            if (!iconPath) {
+                iconPath = `download/${folder}/icon.png`; // Fallback to trigger onerror
+            }
+
             return {
                 ...data,
                 folder: folder,
-                iconPath: `download/${folder}/icon.png`,
+                iconPath: iconPath,
                 apkPath: `download/${folder}/${folder}.apk`
             };
         } catch (error) {
@@ -100,30 +106,46 @@ async function showAppDetails(app) {
     gallery.innerHTML = '';
 
     let picIndex = 1;
-    let foundMore = true;
+    const maxSearchLimit = 30; // Search up to pic30
+    let lastFoundIndex = 0;
+    const foundImages = {};
 
-    while (foundMore) {
-        const picUrl = `download/${app.folder}/pic${picIndex}.png`;
-        const exists = await checkImageExists(picUrl);
+    // First pass: find all existing images
+    const searchPromises = [];
+    for (let i = 1; i <= maxSearchLimit; i++) {
+        searchPromises.push(
+            findExistingImage(`download/${app.folder}`, `pic${i}`).then(picUrl => {
+                if (picUrl) {
+                    foundImages[i] = picUrl;
+                    if (i > lastFoundIndex) {
+                        lastFoundIndex = i;
+                    }
+                }
+            })
+        );
+    }
+    await Promise.all(searchPromises);
 
-        if (exists) {
-            const img = document.createElement('img');
-            img.src = picUrl;
-            img.className = 'screenshot';
-            img.alt = `${app.name} screenshot ${picIndex}`;
+    // Second pass: render images and placeholders up to the last found index
+    for (let i = 1; i <= lastFoundIndex; i++) {
+        const img = document.createElement('img');
+        img.className = 'screenshot';
+        img.alt = `${app.name} screenshot ${i}`;
+
+        if (foundImages[i]) {
+            img.src = foundImages[i];
             img.style.cursor = 'pointer';
             img.onclick = () => openImageModal(img.src);
-            gallery.appendChild(img);
-            picIndex++;
         } else {
-            foundMore = false;
+            // Placeholder for missing numbers in sequence
+            img.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMjAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzMzIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZpbGw9IiM3NzciIGZvbnQtc2l6ZT0iMjQiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGFsaWdubWVudC1iYXNlbGluZT0ibWlkZGxlIj4/PC90ZXh0Pjwvc3ZnPg==';
+            img.style.opacity = '0.5';
+            img.alt = `Screenshot ${i} unavailable`;
         }
-
-        // Safety break
-        if(picIndex > 20) break;
+        gallery.appendChild(img);
     }
 
-    if (gallery.innerHTML === '') {
+    if (lastFoundIndex === 0) {
         gallery.innerHTML = '<p class="text-muted">No screenshots available.</p>';
     }
 
@@ -218,4 +240,16 @@ function checkImageExists(url) {
         img.onerror = () => resolve(false);
         img.src = url;
     });
+}
+
+// Helper to find the first existing image from a list of extensions
+async function findExistingImage(basePath, name) {
+    const extensions = ['.png', '.jpg', '.jpeg', '.webp'];
+    for (const ext of extensions) {
+        const url = `${basePath}/${name}${ext}`;
+        if (await checkImageExists(url)) {
+            return url;
+        }
+    }
+    return null;
 }
