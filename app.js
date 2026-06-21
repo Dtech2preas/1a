@@ -1,7 +1,9 @@
 const appFolders = [
     'grade12_assist',
     'music_app',
-    'study_app'
+    'study_app',
+    'nmu_books_market',
+    'dtech_quizzes'
 ];
 
 let appsData = [];
@@ -68,10 +70,13 @@ function renderHomepage() {
 
 async function showAppDetails(app) {
     // Update Details Info
-    document.getElementById('detail-icon').src = app.iconPath;
-    document.getElementById('detail-icon').onerror = function() {
+    const detailIcon = document.getElementById('detail-icon');
+    detailIcon.src = app.iconPath;
+    detailIcon.onerror = function() {
         this.src = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjMzMzIi8+PC9zdmc+';
     };
+    detailIcon.style.cursor = 'pointer';
+    detailIcon.onclick = () => openImageModal(detailIcon.src);
 
     document.getElementById('detail-name').textContent = app.name;
     document.getElementById('detail-developer').textContent = app.developer;
@@ -106,6 +111,8 @@ async function showAppDetails(app) {
             img.src = picUrl;
             img.className = 'screenshot';
             img.alt = `${app.name} screenshot ${picIndex}`;
+            img.style.cursor = 'pointer';
+            img.onclick = () => openImageModal(img.src);
             gallery.appendChild(img);
             picIndex++;
         } else {
@@ -182,6 +189,25 @@ function showHomepage() {
     document.getElementById('homepage').classList.add('active');
     document.title = 'DTECH Apps Store';
     window.scrollTo(0, 0);
+}
+
+function openImageModal(src) {
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-img');
+    const closeBtn = document.getElementsByClassName('close-modal')[0];
+
+    modal.style.display = 'flex';
+    modalImg.src = src;
+
+    closeBtn.onclick = function() {
+        modal.style.display = 'none';
+    }
+
+    modal.onclick = function(e) {
+        if (e.target !== modalImg) {
+            modal.style.display = 'none';
+        }
+    }
 }
 
 // Helper to check if an image URL returns a valid image without errors

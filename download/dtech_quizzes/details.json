@@ -1,0 +1,9 @@
+{
+    "name": "DTECH Quizzes",
+    "package": "co.za.dtech.quizzes",
+    "version": "1.0.0",
+    "developer": "DTECH",
+    "shortDescription": "Test your knowledge.",
+    "description": "Engaging quizzes across various subjects to help you learn and test your knowledge.",
+    "category": "Education"
+}
