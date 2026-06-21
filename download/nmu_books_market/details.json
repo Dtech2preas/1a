@@ -1,9 +1,54 @@
 {
-    "name": "NMU Books Market",
+    "name": "NMU Books Marketplace",
     "package": "co.za.dtech.nmubooks",
     "version": "1.0.0",
     "developer": "DTECH",
-    "shortDescription": "Buy and sell books at NMU.",
-    "description": "A marketplace for Nelson Mandela University students to buy, sell, and exchange textbooks easily and securely.",
-    "category": "Education"
+    "shortDescription": "Buy, sell, and discover textbooks in a simple student marketplace powered by WhatsApp.",
+    "description": "NMU Books Marketplace is a peer-to-peer textbook exchange platform designed to help students easily buy, sell, and find academic books in one centralized system.\n\nInstead of relying on scattered group chats or social media posts, students can browse available textbooks, request books they need, and connect directly with sellers through WhatsApp.\n\nThe platform is built with a modern, fast, and lightweight design as part of the DTECH ecosystem, focusing on simplicity, accessibility, and student convenience.",
+    "category": "Education / Marketplace",
+    "tags": [
+        "Books",
+        "Textbooks",
+        "Marketplace",
+        "Student App",
+        "Buy Sell Books",
+        "WhatsApp Marketplace",
+        "Education",
+        "Book Exchange"
+    ],
+    "whatsNew": [
+        "Improved browsing performance",
+        "Better search and filtering system",
+        "Enhanced offline caching support",
+        "UI refinements and bug fixes"
+    ],
+    "keyFeatures": [
+        "Browse available textbooks for sale",
+        "View “Looking for Books” requests",
+        "Clean and organized listing system",
+        "“NEW” badge for recently added books",
+        "Search by title, author, or seller",
+        "Sort results (Newest, A–Z, Z–A)",
+        "Fast and responsive filtering system",
+        "Direct contact between buyers and sellers",
+        "Pre-filled messages with book details",
+        "Easy communication without in-app messaging",
+        "Clean dark-themed DTECH interface",
+        "Responsive grid layout for all devices",
+        "Smooth modals for book details",
+        "Deep-link sharing for specific books",
+        "Mark interest in books",
+        "Track available listings",
+        "Easily revisit viewed items",
+        "Offline caching for previously viewed books",
+        "Fast loading with optimized data requests",
+        "Lightweight and responsive browsing",
+        "Separate sections for selling and requests",
+        "Dynamic updates of available books",
+        "Structured marketplace organization",
+        "DTECH signature dark theme",
+        "Neon cyan accents",
+        "Smooth animations and transitions",
+        "Minimal and student-friendly layout"
+    ]
 }
