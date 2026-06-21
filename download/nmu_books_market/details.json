@@ -1,0 +1,9 @@
+{
+    "name": "NMU Books Market",
+    "package": "co.za.dtech.nmubooks",
+    "version": "1.0.0",
+    "developer": "DTECH",
+    "shortDescription": "Buy and sell books at NMU.",
+    "description": "A marketplace for Nelson Mandela University students to buy, sell, and exchange textbooks easily and securely.",
+    "category": "Education"
+}
