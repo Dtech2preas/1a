@@ -1,8 +1,52 @@
 {
-    "name": "Grade 12 Assist",
+    "name": "D-TECH Grade 12 Assistant",
     "package": "co.za.dtech.grade12assist",
     "version": "1.0.0",
     "developer": "DTECH",
-    "shortDescription": "Study material for Grade 12 students.",
-    "description": "Comprehensive study material, past papers, and memos for Grade 12 students to prepare for final exams."
+    "shortDescription": "Access past papers, study guides, quizzes, university information, NSFAS resources, and study tools\u2014all in one Grade 12 learning platform.",
+    "description": "D-TECH Grade 12 Assistant is a comprehensive educational platform designed to help South African Grade 12 learners succeed academically and prepare for life after high school.\n\nThe platform brings together essential learning resources including past examination papers, study guides, SBA materials, PAT resources, quizzes, smart note-taking tools, university application information, and NSFAS guidance.\n\nBuilt with accessibility in mind, D-TECH Grade 12 Assistant is optimized for low-data usage and provides a fast, student-friendly experience that makes studying simpler, smarter, and more effective.\n\nWhether you're preparing for final exams, researching universities, applying for NSFAS, or testing your knowledge through interactive quizzes, D-TECH Grade 12 Assistant gives you everything you need in one place.",
+    "category": "Education",
+    "tags": [
+        "Grade 12",
+        "Matric",
+        "Education",
+        "Past Papers",
+        "Study Guides",
+        "NSFAS",
+        "University Applications",
+        "Quizzes",
+        "Exam Preparation",
+        "South Africa",
+        "Learning",
+        "SBA",
+        "PAT"
+    ],
+    "whatsNew": [
+        "Improved learning resources organization",
+        "Enhanced quiz experience",
+        "Better university application information",
+        "Expanded study materials and guides",
+        "Performance improvements and bug fixes"
+    ],
+    "keyFeatures": [
+        "Past Exam Papers: Access a large collection of past examination papers, Browse papers by subject and year, Quick and easy downloads, Ideal for exam preparation and revision",
+        "Study Guides: Subject-specific study materials, Curriculum-focused revision resources, Easy access to downloadable guides",
+        "SBA & PAT Resources: School-Based Assessment support, Practical Assessment Task resources, Study materials and reference guides",
+        "Interactive Quizzes: Subject-based practice quizzes, Multiple-choice question system, Instant score calculation, Detailed answer review after completion",
+        "Achievement Certificates: Earn certificates for quiz performance, Download and save achievement certificates, Track your learning progress",
+        "Daily Learning Challenges: Daily quiz questions, Inspirational daily quotes, Educational video content, New learning opportunities every day",
+        "University Application Guide: University information and application dates, Faculty and course information, NSFAS support details, Quick access to important university resources",
+        "NSFAS Information Hub: NSFAS application guidance, Eligibility requirements, Funding information, Important dates and resources",
+        "Smart Notes: Create personal study notes, Organize notes by subject, Rich text editing tools, Export notes as PDF documents",
+        "Exam Preparation Tools: Topic-based revision, Subject-specific learning hubs, Structured study resources, Self-assessment opportunities",
+        "Fast & Lightweight: Low-data usage design, Fast loading experience, Optimized for mobile devices, Accessible in low-connectivity environments",
+        "Modern D-TECH Design: Clean educational interface, Dark theme design, Easy navigation, Student-focused user experience",
+        "Students Love It: Past Papers in one place",
+        "Students Love It: Interactive quizzes and certificates",
+        "Students Love It: University application guidance",
+        "Students Love It: NSFAS information and support",
+        "Students Love It: Smart note-taking tools",
+        "Students Love It: Low-data and mobile-friendly design",
+        "Students Love It: Built specifically for South African Grade 12 learners"
+    ]
 }
